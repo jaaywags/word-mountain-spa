@@ -21,9 +21,6 @@ jobs:
           labels: |
             logging=react-spa
 
-      - name: Setup Environment Variables
-        run: echo "${{ secrets.PROD_ENVIRONMENT_FILE }}" > ./environments/environment.prod.json
-
       - name: Set up Docker Buildx
         id: buildx
         uses: docker/setup-buildx-action@v3
