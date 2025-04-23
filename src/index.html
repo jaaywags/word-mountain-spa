@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Word Mountain</title>
+  <link rel="icon" href="./icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="slideshow.css">
+</head>
+
+<body>
+  <main>
+    <img src='./assets/Icon.svg' class="logo" />
+    <h1>Climb to New Heights with Word Mountain!</h1>
+
+    <p>Are you ready for an engaging and endlessly replayable word puzzle experience? Welcome to <strong>Word Mountain</strong>, the ad-free word game that lets you challenge your vocabulary as many times as you like each day!</p>
+
+    <div class="feature">
+        <h2>Unlimited Daily Puzzles</h2>
+        <p>Unlike other word games, Word Mountain offers a fresh set of word puzzles for you to conquer every day. And the best part? You're not limited to just one! Play as many word challenges as you desire, whenever you have a moment to spare.</p>
+    </div>
+
+    <div class="feature">
+        <h2>Five Chances to Conquer Each Peak</h2>
+        <p>Each word puzzle presents you with five opportunities to decipher the hidden word. Use your linguistic skills and strategic thinking to make educated guesses. The color-coded feedback after each attempt will guide you closer to the summit!</p>
+        <ul>
+            <li><strong>Green:</strong> Indicates a letter is in the correct position.</li>
+            <li><strong>Yellow:</strong> Shows a letter is in the word but in the wrong spot.</li>
+            <li><strong>Gray:</strong> Means the letter is not in the target word.</li>
+        </ul>
+    </div>
+
+    <div class="feature">
+        <h2>Track Your Progress</h2>
+        <p>Word Mountain keeps a detailed record of your word-guessing journey. Monitor your:</p>
+        <ul>
+            <li><strong>Wins:</strong> Celebrate your successful climbs!</li>
+            <li><strong>Losses:</strong> Learn from each challenge and come back stronger.</li>
+            <li><strong>Skips:</strong> Sometimes a mountain is best left for another day.</li>
+        </ul>
+        <p>Use these statistics to track your improvement and challenge yourself to reach new personal bests.</p>
+    </div>
+
+    <div class="feature">
+        <h2>A Pure and Uninterrupted Experience</h2>
+        <p>Enjoy the tranquility of the mountains without any distractions. Word Mountain is completely <strong>ad-free</strong>, allowing you to focus solely on the joy of word discovery.</p>
+    </div>
+
+    <div class="feature">
+        <h2>Perfect for Word Enthusiasts of All Levels</h2>
+        <p>Whether you're a seasoned word puzzle veteran or just starting your linguistic adventures, Word Mountain offers a satisfying and engaging experience. The ability to play unlimited puzzles means there's always a new challenge waiting for you.</p>
+    </div>
+
+    <p>Download Word Mountain today and start your ascent! See how many words you can conquer and become a true master of the mountain!</p>
+
+    
+
+    <p>
+      <a href='https://apps.apple.com/us/app/word-mountain/id1111' target='_blank'>Download it on the App Store here.</a>
+    </p>
+    <p>
+      <a href='https://play.google.com/store/apps/details?id=com.signalone.wordmountain' target='_blank'>Download it on the Play Store here.</a>
+    </p>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 7</div>
+        <img src="./assets/1.png" style="width:300px">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 7</div>
+        <img src="./assets/2.png" style="width:300px">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 7</div>
+        <img src="./assets/3.png" style="width:300px">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 7</div>
+        <img src="./assets/4.png" style="width:300px">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 7</div>
+        <img src="./assets/5.png" style="width:300px">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 7</div>
+        <img src="./assets/6.png" style="width:300px">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">7 / 7</div>
+        <img src="./assets/7.png" style="width:300px">
+      </div>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+
+    <p>
+      <a href='/privacy-policy'>View our Privacy Policy here</a>
+    </p>
+    <p>
+      <a href='/terms-of-service'>View our Terms of Service here</a>
+    </p>
+    <p>Need help? Email us at: contact@wordmountain.app</p>
+  </main>
+</body>
+
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+</html>

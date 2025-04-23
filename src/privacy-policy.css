@@ -1,0 +1,25 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  color: #333;
+}
+h1, h2 {
+  color: #007bff;
+}
+p {
+  margin-bottom: 1em;
+}
+h3 {
+  margin-top: 1.5em;
+  color: #555;
+}
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+.contact-info {
+  margin-top: 2em;
+  border-top: 1px solid #ccc;
+  padding-top: 1em;
+}
